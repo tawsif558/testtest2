@@ -1,10 +1,8 @@
 {
-  "name": "Valheim Server with PlayIt",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
-  "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
-  },
+  "name": "Valheim Server",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "codespace",
+  "workspaceFolder": "/workspace",
   "forwardPorts": [2456, 2457, 2458],
-  "postCreateCommand": "bash .devcontainer/setup.sh",
-  "postStartCommand": "bash start.sh"
+  "postCreateCommand": "bash .devcontainer/setup.sh"
 }
