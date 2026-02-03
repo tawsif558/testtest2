@@ -1,28 +1,8 @@
 {
-  "name": "Valheim Server Dev",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
-  
-  "features": {
-    "ghcr.io/devcontainers/features/common-utils:2": {},
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
-  },
-  
-  "forwardPorts": [
-    2456,
-    2457,
-    2458
-  ],
-  
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "ms-azuretools.vscode-docker",
-        "eamodio.gitlens"
-      ]
-    }
-  },
-  
-  "postCreateCommand": "bash .devcontainer/setup.sh",
-  
-  "remoteUser": "vscode"
+  "name": "Valheim Server",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "codespace",
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [2456, 2457, 2458],
+  "postCreateCommand": "bash .devcontainer/setup.sh"
 }
